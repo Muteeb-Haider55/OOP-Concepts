@@ -46,5 +46,6 @@ p=NULL;
 
   
 3. dangling pointer
+    you are try to access the memory  when they are de-allocated
    
    
