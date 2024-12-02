@@ -42,10 +42,60 @@ OOP BY Abdul-Bari
 
 int *p=new int[5];
 
-p=NULL;
-
   
 3. dangling pointer
     you are try to access the memory  when they are de-allocated
+p=NULL;
+# Reference 
+
+  main()
+  {
+int x=10;
+           //we cannot declare a refernece without initilization  it must be initilize at same time
+int &y=x; // Referece
+x++;
+y++;
+cout<<x; //11
+cout<<y;  //12
+   //refernce does not consume any memory here y is a refernce 
+   //ones you initilize the y it connot be assign to any one again in the program
+   cout<<&x<<"       "<<&y;      // Address of x and y will be same
    
+  }
+# Pointer of a Function
+
+void display(){
+cout<<"    HELLO    ";
+}
+int main(){
+void(*fp)();
+
+//Initilize a pointer to a function   During initlization we just write pointer name only in place of function name you just write pointer name in def of function 
+
+fp=display;  // Assign a pointer to a function
+(*fp)();     // Calling a pointer to a function
+}
+
+
+int max(int x,int x){
+return x > y ? x : y;
+}
+int min(int x,int y){
+return x < y ? x : y;
+}
+int main(){
+int (*fp)(int,int);
+fp=max;
+(*fp)(10,5); // max function called
+fp=min;
+(*fp)(10,5); // min function called
+// A function pointer assign all those function which have same signatures
+// in polymorphisem functions use -function to a pointer- to achiving run time ploymorphisem
+
+
+}
+
+
+
+
    
