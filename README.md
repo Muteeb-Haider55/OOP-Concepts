@@ -3,14 +3,14 @@
 
 ## **Pointers**
 
-### **1. Data Variables vs Address Variables**
+### 1. Data Variables vs Address Variables**
 ```cpp
 int x = 10;  // Data variable
 int *p;      // Address variable (declaration)
 p = &x;      // Initialization
 cout << *p;  // Dereferencing -> Output: 10
 ```
-### **1. Data Variables vs Address Variables**
+### . Data Variables vs Address Variables**
 A program can access code section and stack directly.
 However, it cannot access the heap directly.
 Pointers allow indirect access to heap memory.
