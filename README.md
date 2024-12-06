@@ -124,14 +124,42 @@ Transport
 TicketBook();
 selectSeat();
 Bank
-open_account()
-deposit_account()
-withdraw()
-check_bal()
-apply_loan()
+open_account();
+deposit_account();
+withdraw();
+check_bal();
+apply_loan();
 
 ```
+# Writing a Class
+Class is the blue print of object
+class occupy no space in stack
+```cpp
+class Rectangle{
+public: //By default all data members of class are private
+int length;
+int breadth; 
 
+int area(){
+return length*breadth;
+}
+int  perimeter(){
+return 2*(length + breadth);
+}
+};
+
+// Main function
+int main(){
+Rectangle r1,r2;
+//r1 and r2 are objects and each objects occupied some memory in  stack
+//  if integer takes two bytes then r1 occupied 4 bytes and r2 also
+
+//Use Dot Operater to access the public members of class
+r1.length=10;
+r1.breadth=5;
+}
+
+```
 
 
 
