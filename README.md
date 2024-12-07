@@ -150,20 +150,93 @@ return 2*(length + breadth);
 
 // Main function
 int main(){
-Rectangle r1,r2;
+Rectangle r1,r2;//we can create n numbers of objects
 //r1 and r2 are objects and each objects occupied some memory in  stack
 //  if integer takes two bytes then r1 occupied 4 bytes and r2 also
 
 //Use Dot Operater to access the public members of class
 r1.length=10;
 r1.breadth=5;
+cout<<r1.area();
+r2.length=20;
+r2.breadth=5;
+cout<<r2.area();
 }
 
 ```
+Pointer to an Object
+```cpp
+// I use Rectangle class here
+int main(){
+Rectangle r1;
+Rectangle *ptr; // We also Create a dynamic object   Rectangle *ptr=new Rectangle
+ptr=&r;
+ptr->length=10;
+ptr->breadth=10;
+cout<<ptr->area()<<endl;
+cout<<ptr->perimeter()<<endl;
 
+}
+```
+# Data Hiding
+If we take an example of a car everything is hidden and only function of car is visible and through funcations we drive the car
+ # Accessors and Mutators
+ Property Function
+- Accessor
+ Getter Functions -> Read the value
+- Mutators
+  Setter Functions  -> Write the value
+```cpp
+class Rectangle{
+private:
+int length;
+int breadth; 
+public:
+int area(){
+return length*breadth;
+}
+int  perimeter(){
+return 2*(length + breadth);
+}
 
+//We cannot access directly private member of a class in main function for accessing that we use set and get function
 
+void setLength(int l){
+//validate data
+if(l>=0){
+length=l;}
+else
+length=0;
+}
+void setBreadth(int b){
+if(breadth>=0)
+breadth=b;
+else
+breadth=0;
+}
+int getLength(){
+return length;
+}
+int getBreadth(){
+return breadth;
+}
+};
 
+int main(){
+Rectangle r;
+
+//Set the private datamembers of class
+
+r.setLength(10);
+r.setBredth(5);
+
+//for getting length
+
+cout<<" Length of Rectangle" <<r.getLength()<<endl;
+cout<<r.area();
+}
+
+```
 
 
 
