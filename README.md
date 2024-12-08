@@ -237,8 +237,42 @@ cout<<r.area();
 }
 
 ```
+# Constructors
+already we have class Rectangle having length and breadth as data members , setter and getter for setting and accessing the value of length and breadth
+- Why constructor:
+            consider we buy a rectangle from bazar and we pay after paying we not decide the length and breadth, length and breadth are decided before paying
+  same as in class we need to decide breadth and length during creation of object not after that, so constructor is best fit for this purpose a constructor call automatically when an object is created.
+  # Rules
+  - constructor have same name as class name
+  - constructor has no any return type
+ 
+  # Types of Constructor:
+   - Default constructor
+   - Non-parameterized constuctor
+   - parametrized constructor
+   - Copy constructor
 
+  when an object is created  "default constructor" called automatically
+default constructor is also sometimes called non-parametrized constructor or compiler provide constructor.
+```cpp
+// Non- parameterized constructor
+Rectangle(){
+length=0;
+breadth=0;
+}
+int main(){
+Rectangle r;
+}
 
+//parameterized constructor
 
+Rectangle(int l, int b){
+setLength(l);
+setBreadth(b);
+}
+int main(){
+Rectangle r(10,15);
+}
+```
 
    
