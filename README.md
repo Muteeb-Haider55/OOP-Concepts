@@ -270,9 +270,48 @@ Rectangle(int l, int b){
 setLength(l);
 setBreadth(b);
 }
+
+//Copy Constructor
+Rectangle(Rectangle &rect){
+length=rect.length;
+breadth=rect.breadth;
+}
+//main function
 int main(){
 Rectangle r(10,15);
+Rectangle r2(r);
 }
+
+
 ```
+# Deep Copy Constructor
+```cpp
+
+class Test{
+int a;
+int *p;
+Test(int x){
+ a=x;
+  p=new int[a];
+              }
+Test(Test &t){
+a=t.a;
+p=t.p;
+//it also point on same array of object r1 this is the problem with copy contructor so we need to create a new array for object r2 using deep copy constructor
+p=new int[a];
+}
+
+};
+
+//main
+int main(){
+Test t(5);
+Test t2(t);
+}
+
+```
+
+
+
 
    
